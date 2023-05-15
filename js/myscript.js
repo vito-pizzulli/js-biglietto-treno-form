@@ -7,10 +7,9 @@ let ticketDiscount = 0;
 let ticketFinalPrice;
 let discountPercent = "0%";
 const outputForm = document.querySelector('div.output-form');
-console.log(outputForm);
 let outputVisibility = false;
 
-/* Button Click Event - Processes the information entered in the two fields and performs the calculations at each new button click. */
+/* Button Click Event - Processes the information entered in the two input fields and performs the calculations at each new button click. */
 button.addEventListener('click',
     function() {
         kilometersNumber = parseInt(document.getElementById('kilometersNumber').value);
@@ -18,6 +17,8 @@ button.addEventListener('click',
 
         if ((kilometersNumber == 0) || (passengerAge == 0) || isNaN(kilometersNumber) || isNaN(passengerAge)) {
             alert("I dati inseriti non sono validi. Si prega di riprovare.")
+        } else if (passengerAge > 120) {
+            alert("L'età del passeggero non è verosimile. Si prega di riprovare.")
         } else {
 
             /* Output Form Visibility Check */

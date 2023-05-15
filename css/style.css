@@ -31,7 +31,7 @@ span:last-of-type {
 
 h1 {
     font-family: 'Cedarville Cursive', cursive;
-    font-size: 4rem;
+    font-size: 3rem;
     color: #e87177;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     margin-bottom: 1rem;
@@ -110,6 +110,10 @@ button:hover {
 
     div.container {
         width: 100%;
+    }
+
+    h1 {
+    font-size: 2.5rem;
     }
 }
 
