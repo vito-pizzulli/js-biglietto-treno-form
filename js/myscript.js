@@ -6,6 +6,9 @@ let ticketPrice;
 let ticketDiscount = 0;
 let ticketFinalPrice;
 let discountPercent = "0%";
+const outputForm = document.querySelector('div.output-form');
+console.log(outputForm);
+let outputVisibility = false;
 
 /* Button Click Event - Processes the information entered in the two fields and performs the calculations at each new button click. */
 button.addEventListener('click',
@@ -14,8 +17,15 @@ button.addEventListener('click',
         passengerAge = parseInt(document.getElementById('passengerAge').value);
 
         if ((kilometersNumber == 0) || (passengerAge == 0) || isNaN(kilometersNumber) || isNaN(passengerAge)) {
-            alert("I dati inseriti non sono validi. Siete pregati di riprovare.")
+            alert("I dati inseriti non sono validi. Si prega di riprovare.")
         } else {
+
+            /* Output Form Visibility Check */
+            if (outputVisibility == false) {
+                outputForm.classList.remove('d-none');
+                outputForm.classList.add('d-block');
+                outputVisibility = true;
+            }
 
             /* Discounts Calculation */
             ticketPrice = (kilometersNumber * 0.233);
@@ -36,6 +46,12 @@ button.addEventListener('click',
             ticketDiscount = ticketDiscount.toFixed(2);
             ticketFinalPrice = ticketFinalPrice.toFixed(2);
 
-            console.log(kilometersNumber, passengerAge, ticketPrice, ticketDiscount, discountPercent, ticketFinalPrice);
+            /* Output Values in HTML */
+            document.getElementById("kilometersOutput").innerHTML = " " + kilometersNumber;
+            document.getElementById("passengerAgeOutput").innerHTML = " " + passengerAge;
+            document.getElementById("priceOutput").innerHTML = " " + ticketPrice + " €";
+            document.getElementById("discountPercentOutput").innerHTML = " " + discountPercent;
+            document.getElementById("discountPriceOutput").innerHTML = " " + ticketDiscount + " €";
+            document.getElementById("finalPriceOutput").innerHTML = " " + ticketFinalPrice + " €";
         }
     })

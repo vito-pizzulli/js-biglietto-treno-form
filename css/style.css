@@ -11,8 +11,9 @@ main {
     background-position: center;
     height: 100vh;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
     overflow: auto;
     padding: 1rem;
 }
@@ -22,6 +23,10 @@ span {
     font-size: 1.2rem;
     font-weight: bold;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+span:last-of-type {
+    color: goldenrod;
 }
 
 h1 {
@@ -38,10 +43,9 @@ h2 {
     margin-bottom: .5rem;
 }
 
-p {
+p, label {
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    margin-bottom: 2rem;
 }
 
 div.container {
@@ -49,6 +53,50 @@ div.container {
     width: 50%;
     border-radius: 20px;
     padding: 1rem;
+}
+
+input {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 20px;
+    font-size: 1rem;
+    padding: .3rem;
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #e87177;
+    border-radius: 50px;
+    font-size: 1rem;
+    padding: .5rem 2rem;
+    text-transform: uppercase;
+    transition: all .5s;
+}
+
+button:hover {
+    background-color: #192a4b;
+    transform: scale(1.1);
+    color: white;
+}
+
+.mb-2rem {
+    margin-bottom: 2rem;
+}
+
+.mb-1rem {
+    margin-bottom: 1rem;
+}
+
+.me-1rem {
+    margin-right: 1rem;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
 }
 
 
