@@ -71,6 +71,7 @@ button {
     padding: .5rem 2rem;
     text-transform: uppercase;
     transition: all .5s;
+    cursor: pointer;
 }
 
 button:hover {
