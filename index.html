@@ -23,13 +23,20 @@
             <p class="mb-1rem">Il prezzo del biglietto è definito in base ai km da percorrere (0,233 € al km).<br>I passeggeri minorenni hanno diritto ad uno sconto del 19,4%, mentre quelli con più di 65 anni hanno diritto ad uno sconto del 37,7%.</p>
             <p class="mb-2rem">Puoi cambiare i dati nei campi e cliccare nuovamente su "Invio" per ripetere il calcolo per quante volte desideri.</p>
             <h2 class="mb-1rem">Inserisci i dati del passeggero:</h2>
-            <label for="kilometersNumber">Km da percorrere:</label>
-            <input type="text" id="kilometersNumber" name="kilometersNumber" class="mb-1rem me-1rem">
-            <label for="kilometersNumber">Età:</label>
-            <input type="text" id="passengerAge" name="kilometersNumber" class="mb-1rem"><br>
-            <button class="button">
-                Invio
-            </button>
+            <div>
+                <label for="kilometersNumber">Km:</label>
+                <input type="text" id="kilometersNumber" name="kilometersNumber" class="mb-1rem me-1rem">
+            </div>
+            <div>
+                <label for="kilometersNumber">Età:</label>
+                <input type="text" id="passengerAge" name="kilometersNumber" class="mb-1rem me-1rem">
+                <button class="button me-1rem">
+                    Invio
+                </button>
+                <button class="button reset-button">
+                    Reset
+                </button>
+            </div>
         </div>
 
         <!-- Output Form -->

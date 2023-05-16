@@ -2,6 +2,7 @@
 let kilometersNumber;
 let passengerAge;
 const button = document.querySelector('button.button');
+const resetButton = document.querySelector('button.reset-button');
 let ticketPrice;
 let ticketDiscount = 0;
 let ticketFinalPrice;
@@ -15,7 +16,7 @@ button.addEventListener('click',
         kilometersNumber = parseInt(document.getElementById('kilometersNumber').value);
         passengerAge = parseInt(document.getElementById('passengerAge').value);
 
-        if ((kilometersNumber == 0) || (passengerAge == 0) || isNaN(kilometersNumber) || isNaN(passengerAge)) {
+        if ((kilometersNumber <= 0) || (passengerAge <= 0) || isNaN(kilometersNumber) || isNaN(passengerAge)) {
             alert("I dati inseriti non sono validi. Si prega di riprovare.")
         } else if (passengerAge > 120) {
             alert("L'età del passeggero non è verosimile. Si prega di riprovare.")
@@ -55,4 +56,13 @@ button.addEventListener('click',
             document.getElementById("discountPriceOutput").innerHTML = " " + ticketDiscount + " €";
             document.getElementById("finalPriceOutput").innerHTML = " " + ticketFinalPrice + " €";
         }
+    })
+
+resetButton.addEventListener('click',
+    function() {
+        outputForm.classList.remove('d-block');
+        outputForm.classList.add('d-none');
+        document.getElementById('kilometersNumber').value = " ";
+        document.getElementById('passengerAge').value = " ";
+        outputVisibility = false;
     })
